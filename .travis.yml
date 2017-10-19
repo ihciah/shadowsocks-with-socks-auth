@@ -14,8 +14,8 @@ before_install:
   - sudo sh -c "echo '127.0.0.1    localhost' > /etc/hosts"
   - sudo service nginx restart
   - pip install pep8 pyflakes nose coverage PySocks
-  - sudo tests/socksify/install.sh
-  - sudo tests/libsodium/install.sh
-  - sudo tests/setup_tc.sh
+  - sudo sh tests/socksify/install.sh
+  - sudo sh tests/libsodium/install.sh
+  - sudo sh tests/setup_tc.sh
 script:
   - tests/jenkins.sh
